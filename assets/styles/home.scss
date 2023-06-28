@@ -4,6 +4,15 @@
     }
 }
 
+.navbar {
+    z-index: 2;
+    background-color: transparent;
+}
+
+.onoff:hover {
+    color: #FFFFFF;
+}
+
 .background {
     position: fixed;
     width: 100vw;
