@@ -7,12 +7,12 @@ $primary: #F2921D;
 $light: #f3f4E7;
 $danger: #F24452;
 $secondary: #16B4F2;
-$tertiary: #241C59;
+$dark: #241C59;
 $sucess: #3DD980;
 
 @import '~bootstrap/scss/bootstrap';
 
 body {
-    background-color: rgb(243, 243, 243);
+    background-color: $light;
     font-family: 'Poppins';
 }
