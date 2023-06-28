@@ -1,0 +1,55 @@
+@import 'var.scss';
+
+body {
+    background-color: $light;
+}
+
+.login {
+
+    background-image: url('../images/login.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bg-image {
+        // background-image: url('../images/login.png');
+        // background-position: center;
+        // background-size: contain;
+        // background-repeat: no-repeat;
+
+        border-radius: 3rem;
+        width: 50%;
+        height: 40%;
+        padding: 60px clamp(50px, 17%, 100px);
+    }
+
+    // h2 {
+    //     // font-family: $font-title;
+    // }
+
+    // p,
+    // label,
+    // a {
+    //     // font-family: $font-text;
+    // }
+
+    .form-control {
+        border: $light;
+    }
+
+    .form-label {
+        margin-bottom: 0.25rem;
+    }
+
+    .btn {
+        // font-family: $font-title;
+        outline-offset: 6px;
+        background-color: none;
+    }
+}
