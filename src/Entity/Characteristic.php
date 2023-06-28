@@ -19,15 +19,15 @@ class Characteristic
     private ?string $reseau = null;
 
     #[ORM\Column]
-    private ?int $Stockage = null;
+    private ?int $stockage = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Ecran = null;
+    private ?string $ecran = null;
 
     #[ORM\Column(length: 255)]
     private ?string $RAM = null;
 
-    #[ORM\OneToMany(mappedBy: 'Characteristic', targetEntity: Mobil::class)]
+    #[ORM\OneToMany(mappedBy: 'characteristic', targetEntity: Mobil::class)]
     private Collection $mobils;
 
     public function __construct()
@@ -54,24 +54,24 @@ class Characteristic
 
     public function getStockage(): ?int
     {
-        return $this->Stockage;
+        return $this->stockage;
     }
 
-    public function setStockage(int $Stockage): static
+    public function setStockage(int $stockage): static
     {
-        $this->Stockage = $Stockage;
+        $this->stockage = $stockage;
 
         return $this;
     }
 
     public function getEcran(): ?string
     {
-        return $this->Ecran;
+        return $this->ecran;
     }
 
-    public function setEcran(string $Ecran): static
+    public function setEcran(string $ecran): static
     {
-        $this->Ecran = $Ecran;
+        $this->ecran = $ecran;
 
         return $this;
     }
