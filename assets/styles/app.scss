@@ -1,6 +1,15 @@
 @import 'home.scss';
 @import '~bootstrap/scss/bootstrap';
 
+$light: #f3f4E7;
+$danger: #F24452;
+$secondary: #16B4F2;
+$dark: #241C59;
+$success: #3DD980;
+$primary: #F2921D;
+
 body {
     background-color: rgb(216, 216, 216);
 }
+
+@import '~bootstrap/scss/bootstrap';
