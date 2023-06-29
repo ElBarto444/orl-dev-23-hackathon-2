@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Mobil{% endblock %}
+
+{% block body %}
+    <h1>Edit Mobil</h1>
+
+    {{ include('mobil/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_mobil_index') }}">back to list</a>
+
+    {{ include('mobil/_delete_form.html.twig') }}
+{% endblock %}

@@ -18,6 +18,7 @@ class MobilFixtures extends Fixture implements DependentFixtureInterface
         $mobil->setMarque('Samsung');
         $mobil->setModele('Galaxy S3');
         $this->addReference('mobil_0', $mobil);
+        $mobil->setPoster(0);
         $mobil->setCharacteristic($this->getReference('characteristic_0'));
         $mobil->setCategory($this->getReference('category_0'));
         $manager->persist($mobil);
@@ -27,6 +28,7 @@ class MobilFixtures extends Fixture implements DependentFixtureInterface
         $mobil1->setMarque('Apple');
         $mobil1->setModele('iPhone13');
         $this->addReference('mobil_1', $mobil1);
+        $mobil1->setPoster(1);
         $mobil1->setCharacteristic($this->getReference('characteristic_1'));
         $mobil->setCategory($this->getReference('category_1'));
         $manager->persist($mobil1);
@@ -36,6 +38,7 @@ class MobilFixtures extends Fixture implements DependentFixtureInterface
         $mobil2->setMarque('Nokia');
         $mobil2->setModele('G22');
         $this->addReference('mobil_2', $mobil2);
+        $mobil2->setPoster(2);
         $mobil2->setCharacteristic($this->getReference('characteristic_2'));
         $mobil->setCategory($this->getReference('category_2'));
         $manager->persist($mobil2);
@@ -45,6 +48,7 @@ class MobilFixtures extends Fixture implements DependentFixtureInterface
         $mobil3->setMarque('Huawei');
         $mobil3->setModele('P30');
         $this->addReference('mobil_3', $mobil3);
+        $mobil3->setPoster(3);
         $mobil3->setCharacteristic($this->getReference('characteristic_3'));
         $mobil->setCategory($this->getReference('category_3'));
         $manager->persist($mobil3);
@@ -54,6 +58,7 @@ class MobilFixtures extends Fixture implements DependentFixtureInterface
         $mobil4->setMarque('Sony');
         $mobil4->setModele('Xperia 10 IV');
         $this->addReference('mobil_4', $mobil4);
+        $mobil4->setPoster(4);
         $mobil4->setCharacteristic($this->getReference('characteristic_4'));
         $mobil->setCategory($this->getReference('category_4'));
         $manager->persist($mobil4);
