@@ -32,6 +32,7 @@ Encore
     .addEntry('app', './assets/app.js')
     .addStyleEntry('login', './assets/styles/login.scss')
     .addStyleEntry('wheel', '/assets/styles/wheel.scss')
+    .addStyleEntry('jeu', './assets/styles/jeu.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
