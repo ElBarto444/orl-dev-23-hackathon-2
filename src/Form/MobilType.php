@@ -22,7 +22,11 @@ class MobilType extends AbstractType
                 'required'      => false,
                 'allow_delete'  => true,
                 'download_uri' => true,
-            ]);
+            ])
+            ->add('reseau')
+            ->add('stockage')
+            ->add('ecran')
+            ->add('RAM');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
