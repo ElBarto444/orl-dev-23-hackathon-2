@@ -1,14 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}New Mobil
 {% endblock %}
 
 {% block body %}
-	<h1 class="text-center">Ajoute un nouveau mobile</h1>
+{% include '_components/_dots.html.twig' %}
+
+	<h1 class="text-center text-center my-5 fw-bold text-dark">Ajouter un nouveau smartphone</h1>
+
 	<div class="container">
 		{{ include('mobil/_form.html.twig') }}
+		<a class="btn btn-sm btn-primary my-5 p-2 text-dark" href="{{ path('app_mobil_index') }}">Retour</a>
 	</div>
-    
-	<a class="btn btn-outline border-primary text-primary m-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
-    
+
 {% endblock %}

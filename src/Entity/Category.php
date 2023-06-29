@@ -10,6 +10,14 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 class Category
 {
+    public const CATEGORY = [
+        '1 - HC',
+        '2 - C',
+        '3 - B',
+        '4 - A',
+        '5 - Premium'
+    ];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]

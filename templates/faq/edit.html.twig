@@ -4,11 +4,12 @@
 
 {% block body %}
 {% include '_components/_dots.html.twig' %}
-<div class="container">
+	<div class="container">
     <h1 class="fw-bold mt-5 text-dark">Modifier la FAQ</h1>
 
-    {{ include('category/_form.html.twig', {'button_label': 'Modifier'}) }}
+    {{ include('faq/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a class="btn btn-sm btn-success mb-5 p-2 text-dark" href="{{ path('app_category_index') }}">Retour</a>
+    <a class="btn btn-sm btn-success mb-5 p-2 text-dark" href="{{ path('app_faq_index') }}">Retour</a>
+
     </div>
 {% endblock %}

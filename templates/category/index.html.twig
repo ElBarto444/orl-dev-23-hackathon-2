@@ -1,26 +1,36 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Category index{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+{% include '_components/_dots.html.twig' %}
+
+<div class="container">
+    <h1 class="text-primary my-5 fw-bold">Catégories</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
+                
+                <th class="text-dark">Nom</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for category in categories %}
             <tr>
-                <td>{{ category.id }}</td>
-                <td>{{ category.name }}</td>
+                <td class="text-dark">{{ category.name }}</td>
                 <td>
-                    <a href="{{ path('app_category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>
+                    <a class="btn btn-sm btn-primary text-light" href="{{ path('app_category_edit', {'id': category.id}) }}">
+                    <img src="{{ asset('build/images/pencil.svg') }}" width="20px">
+                    Modifier</a>
+                </td>
+
+                                <td>
+                    <a class="btn btn-sm btn-danger text-light" href="{{ path('app_category_delete', {'id': category.id}) }}">
+                    <img src="{{ asset('build/images/cross.svg') }}" width="20px">
+                    Supprimer</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +41,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_category_new') }}">Create new</a>
+    <a class="btn btn-sm btn-success my-5 p-2 text-dark" href="{{ path('app_category_new') }}">Créer une nouvelle catégorie</a>
+    </div>
 {% endblock %}
