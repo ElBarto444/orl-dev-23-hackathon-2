@@ -1,40 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mobil index{% endblock %}
+{% block title %}Mobil index
+{% endblock %}
 
 {% block body %}
-    <h1>Mobil index</h1>
+	<h1 class="text-center">Liste des mobiles en stock</h1>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Marque</th>
-                <th>Modele</th>
-                <th>Poster</th>
-                <th>UpdatedAt</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for mobil in mobils %}
-            <tr>
-                <td>{{ mobil.id }}</td>
-                <td>{{ mobil.marque }}</td>
-                <td>{{ mobil.modele }}</td>
-                <td>{{ mobil.poster }}</td>
-                <td>
-                    <a href="{{ path('app_mobil_show', {'id': mobil.id}) }}">show</a>
-                    <a href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+					<th>Marque</th>
+					<th>Modele</th>
+					<th>Modification</th>
+                    <th>Détail</th>
 
-    <a href="{{ path('app_mobil_new') }}">Create new</a>
+				</tr>
+			</thead>
+			<tbody>
+				{% for mobil in mobils %}
+					<tr>
+						<td>{{ mobil.marque }}</td>
+						<td>{{ mobil.modele }}</td>
+						<td>
+							<a class="btn btn-primary" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
+						</td>
+						<td>
+							<a class="btn btn-outline border-primary text-primary" href="{{ path('app_mobil_show', {'id': mobil.id}) }}">Voir les infos</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="6">no records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<a class="btn btn-primary mt-3" href="{{ path('app_mobil_new') }}">Create new</a>
+	</div>
 {% endblock %}
