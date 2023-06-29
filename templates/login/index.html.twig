@@ -8,38 +8,7 @@
 {% endblock %}
 
 {% block body %}
-	<div class="dots">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
+	{% include '_components/_dots.html.twig' %}
 
 	<div class="login">
 		<div class="container my-5">
@@ -60,6 +29,8 @@
 
 						<a class="text-dark fw-medium" href="#">Mot de passe oublié ?</a>
 					</div>
+					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
 					<button class="mt-5 btn btn-light shadow rounded-pill border border-dark px-3 text-light fw-bold" type="submit">Se connecter</button>
 				</form>
 			</div>
