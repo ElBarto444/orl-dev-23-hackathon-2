@@ -1,14 +1,13 @@
 {% extends 'admin.html.twig' %}
-{% block title %}Edit Mobil{% endblock %}
+{% block title %}Modifier{% endblock %}
 
 {% block body %}
 {% include '_components/_dots.html.twig' %}
-    <h1 class="text-center">Modifier le mobile</h1>
 <div class="container">
-    {{ include('mobil/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
- {{ include('mobil/_delete_form.html.twig') }}
- </div>
-    <a class="btn btn-outline border-primary text-primary m-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
+    <h1 class="fw-bold my-5 text-dark">Modifier le mobile</h1>
+    {{ include('mobil/_form.html.twig', {'button_label': 'Modifier'}) }}
+ 
+    <a class="btn btn-sm btn-success my-5 p-2 text-dark" href="{{ path('app_mobil_index') }}">Retour</a>
 
-   
+   </div>
 {% endblock %}
