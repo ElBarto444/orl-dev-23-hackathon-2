@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emmaus || Roue
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	{{ encore_entry_link_tags('jeu') }}
+{% endblock %}
+
+{% block body %}
+	{% include '_components/_dots.html.twig' %}
+
+    <h1 class="fw-bold mt-5 text-dark">Emmaus, c'est aussi savoir détendre les siens</h1>
+
+   <section class="container">
+      <div id="game">
+        <div id="start-spot"></div>
+        <div class="wall-left"></div>
+        <div class="wall-right"></div>
+
+        <div id="gameover"><h1>Perdu...</h1></div>
+        <div id="win"><h1>Bravo !<br/>Tu as gagné</h1></div>
+      </div>
+
+      			<a href="{{ path('app_accueil')}}" class="btn btn-primary btn-lg text-white fw-bold btn-lg rounded">Revenir à l'accueil</a>
+
+    </section>
+{% endblock %}
