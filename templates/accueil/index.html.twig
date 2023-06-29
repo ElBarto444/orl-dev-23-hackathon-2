@@ -7,44 +7,50 @@
 	{% include '_components/_dots.html.twig' %}
 	<section class="container">
 
-		<div class="row-md col d-flex my-5">
+		<div class="row-md col d-flex my-3">
 			<div class="col-md-7 col">
 				<h1 class="fw-bold mt-5 text-dark">Et pourquoi votre
 					<span class="text-primary">smartphone</span>
 					n'aurait pas le droit lui aussi à une seconde chance ?</h1>
-				<a href="https://emmaus-connect.org/dons-des-entreprises/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Donner votre smartphone</a>
-			</div>
-			<div class="col-md-5 col my-5 d-flex justify-content-end">
-				<img src="{{ asset('build/images/telephone.webp')}}" class="rounded w-75 border border-primary">
-			</div>
+				<a href="https://emmaus-connect.org/dons-des-entreprises/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Donner votre smartphone
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-phone" viewbox="0 0 16 16">
+						<path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+						<path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+					</svg>
+				</svg>
+			</a>
 		</div>
-
-
-		<div class="row-md col d-md-flex d-block my-5">
-			<div class="col-md-5 col my-5 d-flex justify-content-start">
-				<img src="{{ asset('build/images/lieu.jpeg')}}" class="rounded w-75 border border-primary">
-			</div>
-			<div class="col-md-7 col text-end">
-				<h1 class="fw-bold mt-5 text-dark">Venez nous
-					<span class="text-primary text-end">rejoindre !</span>
-				</br>
-				Découvrez tous nos lieux d'actions ou nous récupérons votre matériel !
-			</h1>
-			<a href="https://emmaus-connect.org/nous-trouver/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Ou nous trouver ?</a>
+		<div class="col-md-5 col my-5 d-flex justify-content-end">
+			<img src="{{ asset('build/images/telephone.webp')}}" class="rounded w-75 border border-primary">
 		</div>
 	</div>
 
-<<<<<<< HEAD
+
+	<div class="row-md col d-md-flex d-block my-3">
+		<div class="col-md-5 col my-5 d-flex justify-content-start">
+			<img src="{{ asset('build/images/lieu.jpeg')}}" class="rounded w-75 border border-primary">
+		</div>
+		<div class="col-md-7 col text-end">
+			<h1 class="fw-bold mt-5 text-dark">Venez nous
+				<span class="text-primary text-end">rejoindre !</span>
+			</br>
+			Découvrez tous nos lieux d'actions ou nous récupérons votre matériel !
+		</h1>
+		<a href="https://emmaus-connect.org/nous-trouver/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Ou nous trouver ?
+			<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt" viewbox="0 0 16 16">
+				<path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+				<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+			</svg>
+		</a>
+	</div>
+</div>
 {% if app.user %}
-		<div class="d-flex">
-							<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
-		</div>
-{% endif %}
-=======
 	<div class="d-flex">
-		<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
+		<a href="{{ path('app_roue')}}" class="btn btn-primary border btn-lg text-white fw-bold m-auto my-5">Découvrez la roue spécial bénévole !
+			<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-emoji-laughing" viewbox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+				<path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+			</svg>
+		</a>
 	</div>
-
->>>>>>> a7817a3639f41c985d07ad95e1f593ac077ac87d
-
-</section>{% endblock %}
+{% endif %}</section>{% endblock %}

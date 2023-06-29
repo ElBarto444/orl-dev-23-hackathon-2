@@ -14,7 +14,7 @@
 					</li>
 					{% if app.user %}
 					<li>
-						<a class="nav-link fw-bold mx-5" aria-current="page" href="#">Ajouter un smartphone</a>
+						<a class="nav-link fw-bold mx-5" aria-current="page" href="">Ajouter un smartphone</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link fw-bold mx-5" href="#">Base de donnée</a>
@@ -29,12 +29,12 @@
 			</div>
 		</div>
 						{% if app.user is not empty %}
-					<a href="{{ path('app_logout') }}" class="btn btn-danger d-flex fw-bold align-items-center">
+					<a href="{{ path('app_logout') }}" class="btn btn-danger d-flex text-white fw-bold align-items-center">
 						<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
 						Déconnexion</a>
 				{% else %}
 
-					<a href="{{ path('app_login') }}" class="btn btn-primary d-flex fw-bold align-items-center">
+					<a href="{{ path('app_login') }}" class="btn btn-primary d-flex text-white fw-bold align-items-center">
 						<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
 						Connexion</a>
 
