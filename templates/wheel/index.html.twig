@@ -33,6 +33,12 @@ let btnJouer = document.querySelector("#jouer");
 let monPortefeuille = document.querySelector('.monnaie');
 let mise = document.querySelector('#mise');
 let portefeuille = 10000;
+const boutonJouer = document.getElementById('jouer');
+boutonJouer.addEventListener('click', function none() {
+    boutonJouer.style.display = 'none';
+})
+
+
 
 // Fonction d'initialisation
 btnJouer.addEventListener("click", initialisation);
@@ -72,22 +78,22 @@ function argentAleatoire(deg) {
     switch (true) {
       case valeur > 0 && valeur <= 15:
         calculArgent(700);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 15 && valeur <= 30:
         calculArgent(600);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 30 && valeur <= 45:
         calculArgent(3000);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 45 && valeur <= 60:
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 60 && valeur <= 75:
         calculArgent(500);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 75 && valeur <= 90:
         calculArgent(750);
@@ -95,80 +101,80 @@ function argentAleatoire(deg) {
         break;
       case valeur > 90 && valeur <= 105:
         calculArgent(600);
-        alert("Perdu...");
+        alert("Vous avez gagné la formation de votre choix !");
         break;
       case valeur > 105 && valeur <= 120:
         calculArgent(450);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 120 && valeur <= 135:
         calculArgent(300);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 135 && valeur <= 150:
         setTimeout(roueTourne, 1000);
         break;
       case valeur > 150 && valeur <= 165:
         calculArgent(800);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 165 && valeur <= 180:
         calculArgent(700);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 180 && valeur <= 195:
         calculArgent(600);
-        alert("Vous avez gagné 10% sur votre prochaine commande !");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 195 && valeur <= 210:
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 210 && valeur <= 225:
         calculArgent(900);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 225 && valeur <= 240:
         calculArgent(400);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 240 && valeur <= 255:
         calculArgent(500);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 255 && valeur <= 270:
         calculArgent(1000);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 270 && valeur <= 285:
         calculArgent(650);
-        alert("Perdu...")
+        alert("Dommage, c'est perdu...")
         break;
       case valeur > 285 && valeur <= 300:
         calculArgent(400);
-        alert("Vous avez gagné 10% sur votre prochaine commande !")
+        alert("Dommage, c'est perdu...")
         break;
       case valeur > 300 && valeur <= 315:
         calculArgent(300);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 315 && valeur <= 330:
         calculArgent(800);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 330 && valeur <= 345:
         calculArgent(500);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
       case valeur > 345 && valeur <= 360:
         calculArgent(350);
-        alert("Perdu...");
+        alert("Dommage, c'est perdu...");
         break;
     }
   }, 5000);
 }
 </script>
 
-    <a href="{{ path('app_accueil')}}" class="btn btn-dark btn-lg text-primary fw-bold btn-lg rounded">Revenir à l'accueil</a>
+    <a href="{{ path('app_accueil')}}" class="btn btn-primary btn-lg text-white fw-bold btn-lg rounded">Revenir à l'accueil</a>
 
     </section>
 {% endblock %}
