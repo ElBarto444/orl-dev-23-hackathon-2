@@ -10,7 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 
@@ -41,7 +40,7 @@ class Mobil
     #[ORM\ManyToOne(inversedBy: 'mobils')]
     private ?Category $category = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $poster = null;
 
     #[Vich\UploadableField(mapping: 'poster_file', fileNameProperty: 'poster')]
@@ -117,7 +116,7 @@ class Mobil
         return $this->poster;
     }
 
-    public function setPoster(string $poster): static
+    public function setPoster(?string $poster): static
     {
         $this->poster = $poster;
 

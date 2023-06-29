@@ -17,7 +17,7 @@ class MobilFixtures extends Fixture implements DependentFixtureInterface
         $mobil->setMarque('Samsung');
         $mobil->setModele('Galaxy S3');
         $this->addReference('mobil_0', $mobil);
-        $mobil->setPoster(0);
+        $mobil->setPoster('url(images/placeholdermobil.jpg)');
         $mobil->setReseau('4G');
         $mobil->setStockage('64');
         $mobil->setEcran('6P');

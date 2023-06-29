@@ -34,7 +34,7 @@ class MobilController extends AbstractController
             return $this->redirectToRoute('app_mobil_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('mobil/new.html.twig', [
+        return $this->render('mobil/new.html.twig', [
             'mobil' => $mobil,
             'form' => $form,
         ]);
@@ -60,7 +60,7 @@ class MobilController extends AbstractController
             return $this->redirectToRoute('app_mobil_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('mobil/edit.html.twig', [
+        return $this->render('mobil/edit.html.twig', [
             'mobil' => $mobil,
             'form' => $form,
         ]);

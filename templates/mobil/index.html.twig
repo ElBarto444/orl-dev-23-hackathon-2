@@ -6,38 +6,31 @@
 {% block body %}
 	<h1 class="text-center">Liste des mobiles en stock</h1>
 	<div class="container">
-		<table class="table">
-			<thead>
-				<tr>
-
-					<th>Marque</th>
-					<th>Modele</th>
-					<th>Modification</th>
-                    <th>Détail</th>
-
-				</tr>
-			</thead>
-			<tbody>
+		<div class="card bg-light">
+			<div class="row">
 				{% for mobil in mobils %}
-					<tr>
-						<td>{{ mobil.marque }}</td>
-						<td>{{ mobil.modele }}</td>
-						<td>
-							<a class="btn btn-primary" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
-						</td>
-						<td>
-							<a class="btn btn-outline border-primary text-primary" href="{{ path('app_mobil_show', {'id': mobil.id}) }}">Voir les infos</a>
-						</td>
-					</tr>
-				{% else %}
-					<tr>
-						<td colspan="6">no records found</td>
-					</tr>
+					<div class="col-lg-4 col-md-6">
+						<div class=" rounded m-2">
+							<img class="card-img-top" src="{{ vich_uploader_asset(mobil) }}" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title ">{{ mobil.marque }}-{{ mobil.modele }}</h5>
+								<p class="card-text">Taille écran
+									{{ mobil.ecran }} </p>
+								<p></p>
+								<p>Mémoire
+									{{ mobil.stockage }}</p>
+								<p>Réseau
+									{{ mobil.reseau }} RAM
+									{{ mobil.RAM }}</p>
+								<a href="{{ path('app_mobil_show', {'id': mobil.id}) }}" class="btn btn-success">Détail</a>
+							</div>
+						</div>
+					</div>
 				{% endfor %}
-			</tbody>
-		</table>
+			</div>
+		</div>
 	</div>
-	<div class="container">
-		<a class="btn btn-primary mt-3" href="{{ path('app_mobil_new') }}">Create new</a>
-	</div>
-{% endblock %}
+</div>
+<div class="container">
+	<a class="btn btn-primary my-3" href="{{ path('app_mobil_new') }}">Ajouter mobile</a>
+</div>{% endblock %}

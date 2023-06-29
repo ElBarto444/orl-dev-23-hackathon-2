@@ -22,6 +22,7 @@ class MobilType extends AbstractType
                 'required'      => false,
                 'allow_delete'  => true,
                 'download_uri' => true,
+                'label' => 'Ajouter une image'
             ])
             ->add('reseau')
             ->add('stockage')
