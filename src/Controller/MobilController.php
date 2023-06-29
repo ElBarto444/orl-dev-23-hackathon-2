@@ -12,15 +12,30 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Service\CalculatorService;
+use App\Form\SearchSmartphoneType;
 
 #[Route('/mobil')]
 class MobilController extends AbstractController
 {
     #[Route('/', name: 'app_mobil_index', methods: ['GET'])]
-    public function index(MobilRepository $mobilRepository): Response
+    public function index(Request $request, MobilRepository $mobilRepository): Response
     {
+        $form = $this->createForm(SearchSmartphoneType::class);
+        $form->handleRequest($request);
+
+        $mobils = [];
+        if ($form->isSubmitted() && $form->isValid()) {
+            $search = $form->getData()['search'];
+
+            $mobils = $mobilRepository->findMobil($search, $mobils);
+        } else {
+            $mobils = $mobilRepository->findAll();
+        }
+
         return $this->render('mobil/index.html.twig', [
             'mobils' => $mobilRepository->findAll(),
+            'form' => $form->createView(),
+
         ]);
     }
 
@@ -109,7 +124,7 @@ class MobilController extends AbstractController
             return $this->redirectToRoute('app_mobil_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('mobil/edit.html.twig', [
+        return $this->render('mobil/edit.html.twig', [
             'mobil' => $mobil,
             'form' => $form,
         ]);
@@ -125,3 +140,39 @@ class MobilController extends AbstractController
         return $this->redirectToRoute('app_mobil_index', [], Response::HTTP_SEE_OTHER);
     }
 }
+
+// namespace App\Controller;
+
+// use App\Repository\CharacteristicRepository;
+// use Symfony\Component\HttpFoundation\Request;
+// use Symfony\Component\HttpFoundation\Response;
+// use Symfony\Component\Routing\Annotation\Route;
+// use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+// use Symfony\Component\Form\Extension\Core\Type\SearchType;
+
+
+// class AccueilController extends AbstractController
+// {
+//     #[Route('/home', name: 'app_accueil')]
+//     public function index(
+//         Request $request,
+//         CharacteristicRepository $characteristicRepository,
+//     ): Response {
+//         $form = $this->createForm(SearchSmartphoneType::class);
+//         $form->handleRequest($request);
+
+//         $characteristics = [];
+//         if ($form->isSubmitted() && $form->isValid()) {
+//             $search = $form->getData()['search'];
+
+//             $characteristics = $characteristicRepository->findCharacteristic($search);
+//         } else {
+//             $characteristics = $characteristicRepository->findAll();
+//         }
+
+//         return $this->render('accueil/index.html.twig', [
+//             'characteristics' => $characteristics,
+//             'form' => $form->createView(),
+//         ]);
+//     }
+// }

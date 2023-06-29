@@ -30,6 +30,6 @@ final class Version20230629133137 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('DROP TABLE messenger_messages');
         $this->addSql('ALTER TABLE calculator CHANGE phone_condition phone_condition VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE mobil DROP reseau, DROP stockage, DROP ecran, DROP ram, DROP phone_condition');
+        $this->addSql('ALTER TABLE mobil DROP reseau, DROP stockage, DROP ecran, DROP ram, DROP phone_condition, DROP category_name');
     }
 }

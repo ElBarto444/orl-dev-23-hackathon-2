@@ -1,29 +1,44 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Mobil index
 {% endblock %}
 
 {% block body %}
-	<h1 class="text-center">Liste des mobiles en stock</h1>
+
+	{% include '_components/_dots.html.twig' %}
+
+
+	<h1 class="text-center mt-5 fw-bold text-dark">Liste des smartphones en stock</h1>
+
+
+	{% include '_components/_searchBar.html.twig'%}
 	<div class="container">
+
 		<table class="table">
 			<thead>
 				<tr>
 
-					<th>Marque</th>
-					<th>Modele</th>
-					<th>Modification</th>
-                    <th>Détail</th>
+
+					<th class="text-dark fw-bold">Marque</th>
+					<th class="text-dark fw-bold">Modele</th>
+					<th class="text-dark fw-bold">Modification</th>
+					<th class="text-dark fw-bold">Détail</th>
 
 				</tr>
 			</thead>
 			<tbody>
 				{% for mobil in mobils %}
 					<tr>
-						<td>{{ mobil.marque }}</td>
-						<td>{{ mobil.modele }}</td>
+						<td class="text-dark">{{ mobil.marque }}</td>
+
+
+						<td class="text-dark">{{ mobil.modele }}</td>
+
+
 						<td>
-							<a class="btn btn-primary" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
+							<a class="btn btn-sm btn-primary text-light" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">
+							<img src="{{ asset('build/images/pencil.svg') }}" width="20px">
+							Modifier</a>
 						</td>
 						<td>
 							<a class="btn btn-outline border-primary text-primary" href="{{ path('app_mobil_show', {'id': mobil.id}) }}">Voir les infos</a>
@@ -38,6 +53,8 @@
 		</table>
 	</div>
 	<div class="container">
-		<a class="btn btn-primary mt-3" href="{{ path('app_mobil_new') }}">Create new</a>
+
+		<a class="btn btn-sm btn-success my-5 p-2 text-dark" href="{{ path('app_mobil_new') }}">Ajouter un nouveau smartphone</a>
+
 	</div>
 {% endblock %}
