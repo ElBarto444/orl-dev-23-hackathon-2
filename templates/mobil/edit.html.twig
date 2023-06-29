@@ -3,11 +3,12 @@
 {% block title %}Edit Mobil{% endblock %}
 
 {% block body %}
-    <h1>Edit Mobil</h1>
+    <h1 class="text-center">Modifier le mobile</h1>
+<div class="container">
+    {{ include('mobil/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+ {{ include('mobil/_delete_form.html.twig') }}
+ </div>
+    <a class="btn btn-outline border-primary text-primary m-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
 
-    {{ include('mobil/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_mobil_index') }}">back to list</a>
-
-    {{ include('mobil/_delete_form.html.twig') }}
+   
 {% endblock %}
