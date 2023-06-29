@@ -6,7 +6,6 @@ body {
 
 .login {
 
-    background-image: url('../images/login.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -18,26 +17,11 @@ body {
     }
 
     .bg-image {
-        // background-image: url('../images/login.png');
-        // background-position: center;
-        // background-size: contain;
-        // background-repeat: no-repeat;
-
         border-radius: 3rem;
         width: 50%;
         height: 40%;
         padding: 60px clamp(50px, 17%, 100px);
     }
-
-    // h2 {
-    //     // font-family: $font-title;
-    // }
-
-    // p,
-    // label,
-    // a {
-    //     // font-family: $font-text;
-    // }
 
     .form-control {
         border: $light;
@@ -48,8 +32,16 @@ body {
     }
 
     .btn {
-        // font-family: $font-title;
         outline-offset: 6px;
-        background-color: none;
+        background-color: $dark;
     }
+}
+
+.navbar {
+    z-index: 2;
+    background-color: transparent;
+}
+
+.onoff:hover {
+    color: #FFFFFF;
 }

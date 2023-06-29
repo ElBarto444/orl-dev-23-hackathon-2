@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mobil
+{% endblock %}
+
+{% block body %}
+	<h1 class="text-center">Detail du mobile</h1>
+	<div class="container">
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>Marque</th>
+					<td>{{ mobil.marque }}</td>
+				</tr>
+				<tr>
+					<th>Modele</th>
+					<td>{{ mobil.modele }}</td>
+				</tr>
+				<tr>
+					<th>Poster</th>
+					<td>{{ mobil.poster }}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+    <div class="container">
+	<a class="btn btn-primary mt-3" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
+	{{ include('mobil/_delete_form.html.twig') }}
+
+	<a class="btn btn-outline border-primary text-primary mt-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
+</div>
+{% endblock %}

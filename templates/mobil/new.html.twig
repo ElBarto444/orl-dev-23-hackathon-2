@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Mobil
+{% endblock %}
+
+{% block body %}
+	<h1 class="text-center">Ajoute un nouveau mobile</h1>
+	<div class="container">
+		{{ include('mobil/_form.html.twig') }}
+	</div>
+    
+	<a class="btn btn-outline border-primary text-primary m-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
+    
+{% endblock %}

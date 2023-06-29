@@ -15,9 +15,10 @@
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
-	{% block navbar %}
-		{% include '_components/_navbar.html.twig' %}
-	{% endblock %}
-	{% block body %}
-	{% endblock %}
+	<body>
+		{% block navbar %}
+			{% include '_components/_navbar.html.twig' %}
+		{% endblock %}
+		{% block body %}{% endblock %}
+	</body>
 </html>
