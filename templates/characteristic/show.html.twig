@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Characteristic{% endblock %}
+
+{% block body %}
+    <h1>Characteristic</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ characteristic.id }}</td>
+            </tr>
+            <tr>
+                <th>Reseau</th>
+                <td>{{ characteristic.reseau }}</td>
+            </tr>
+            <tr>
+                <th>Stockage</th>
+                <td>{{ characteristic.stockage }}</td>
+            </tr>
+            <tr>
+                <th>Ecran</th>
+                <td>{{ characteristic.ecran }}</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>{{ characteristic.RAM }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_characteristic_index') }}">back to list</a>
+
+    <a href="{{ path('app_characteristic_edit', {'id': characteristic.id}) }}">edit</a>
+
+    {{ include('characteristic/_delete_form.html.twig') }}
+{% endblock %}

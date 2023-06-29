@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mobil index{% endblock %}
+
+{% block body %}
+    <h1>Mobil index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Marque</th>
+                <th>Modele</th>
+                <th>Poster</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mobil in mobils %}
+            <tr>
+                <td>{{ mobil.id }}</td>
+                <td>{{ mobil.marque }}</td>
+                <td>{{ mobil.modele }}</td>
+                <td>{{ mobil.poster }}</td>
+                <td>
+                    <a href="{{ path('app_mobil_show', {'id': mobil.id}) }}">show</a>
+                    <a href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_mobil_new') }}">Create new</a>
+{% endblock %}
