@@ -14,11 +14,13 @@
 					</li>
 					{% if app.user %}
 						<li>
-							<a aria-current="page" href="" class="nav-link fw-bold text-dark mx-5">Ajouter un smartphone</a>
+							<a class="nav-link fw-bold text-dark mx-5" aria-current="page" href="/mobil/new">Ajouter un smartphone</a>
 						</li>
 						<li class="nav-item">
-							<a href="{{ path('app_admin_page')}}" class="nav-link fw-bold text-dark mx-5">Base de donnée</a>
+							<a class="nav-link fw-bold text-dark mx-5" href="/mobil">Base de donnée</a>
+
 						</li>
+
 					{% endif %}
 					<li class="nav-item">
 						<a href="{{ path('app_question')}}" class="nav-link fw-bold text-dark mx-5">FAQ</a>
