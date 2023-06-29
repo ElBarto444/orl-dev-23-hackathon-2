@@ -27,13 +27,13 @@ class MobilController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $search = $form->getData()['search'];
 
-            $mobils = $mobilRepository->findMobil($search, $mobils);
+            $mobils = $mobilRepository->findMobil($search);
         } else {
             $mobils = $mobilRepository->findAll();
         }
 
         return $this->render('mobil/index.html.twig', [
-            'mobils' => $mobilRepository->findAll(),
+            'mobils' => $mobils,
             'form' => $form->createView(),
 
         ]);
