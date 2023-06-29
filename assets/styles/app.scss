@@ -1,6 +1,9 @@
 @import 'home.scss';
+@import '_footer.scss';
 @import '~bootstrap/scss/bootstrap';
 
 body {
     background-color: rgb(216, 216, 216);
+    height: 90vh;
+    padding-bottom: 50px;
 }

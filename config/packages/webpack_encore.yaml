@@ -43,3 +43,5 @@ framework:
 #when@test:
 #    webpack_encore:
 #        strict_mode: false
+
+# config/packages/webpack_encore.yaml
