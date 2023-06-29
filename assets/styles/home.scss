@@ -25,11 +25,10 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
-
+    z-index: -1;
 }
 
-.background span {
+.dots span {
     width: 2vmin;
     height: 2vmin;
     border-radius: 2vmin;
@@ -42,7 +41,7 @@
 }
 
 
-.background span:nth-child(0) {
+.dots span:nth-child(0) {
     color: #F24452;
     top: 99%;
     left: 76%;
@@ -52,7 +51,7 @@
     box-shadow: 4vmin 0 1.0445779714189287vmin currentColor;
 }
 
-.background span:nth-child(1) {
+.dots span:nth-child(1) {
     color: #16B4F2;
     top: 38%;
     left: 47%;
@@ -62,7 +61,7 @@
     box-shadow: -4vmin 0 1.2299847347271056vmin currentColor;
 }
 
-.background span:nth-child(2) {
+.dots span:nth-child(2) {
     color: #241C59;
     top: 92%;
     left: 25%;
@@ -72,7 +71,7 @@
     box-shadow: 4vmin 0 1.1457508526987934vmin currentColor;
 }
 
-.background span:nth-child(3) {
+.dots span:nth-child(3) {
     color: #F24452;
     top: 51%;
     left: 43%;
@@ -82,7 +81,7 @@
     box-shadow: 4vmin 0 0.6961558646214208vmin currentColor;
 }
 
-.background span:nth-child(4) {
+.dots span:nth-child(4) {
     color: #241C59;
     top: 56%;
     left: 59%;
@@ -92,7 +91,7 @@
     box-shadow: -4vmin 0 0.603771659460056vmin currentColor;
 }
 
-.background span:nth-child(5) {
+.dots span:nth-child(5) {
     color: #3DD980;
     top: 92%;
     left: 82%;
@@ -102,7 +101,7 @@
     box-shadow: 4vmin 0 0.9952846590505044vmin currentColor;
 }
 
-.background span:nth-child(6) {
+.dots span:nth-child(6) {
     color: #3DD980;
     top: 58%;
     left: 30%;
@@ -112,7 +111,7 @@
     box-shadow: -4vmin 0 1.1736944015461441vmin currentColor;
 }
 
-.background span:nth-child(7) {
+.dots span:nth-child(7) {
     color: #16B4F2;
     top: 61%;
     left: 74%;
@@ -122,7 +121,7 @@
     box-shadow: 4vmin 0 0.9193603880699794vmin currentColor;
 }
 
-.background span:nth-child(8) {
+.dots span:nth-child(8) {
     color: #F24452;
     top: 81%;
     left: 62%;
@@ -132,7 +131,7 @@
     box-shadow: -4vmin 0 0.946295611076593vmin currentColor;
 }
 
-.background span:nth-child(9) {
+.dots span:nth-child(9) {
     color: #F2921D;
     top: 48%;
     left: 44%;
@@ -142,7 +141,7 @@
     box-shadow: 4vmin 0 1.1152156264219724vmin currentColor;
 }
 
-.background span:nth-child(10) {
+.dots span:nth-child(10) {
     color: #F24452;
     top: 38%;
     left: 41%;
@@ -152,7 +151,7 @@
     box-shadow: -4vmin 0 0.656015678679249vmin currentColor;
 }
 
-.background span:nth-child(11) {
+.dots span:nth-child(11) {
     color: #F2921D;
     top: 37%;
     left: 43%;
@@ -162,7 +161,7 @@
     box-shadow: 4vmin 0 0.8205539170360647vmin currentColor;
 }
 
-.background span:nth-child(12) {
+.dots span:nth-child(12) {
     color: #241C59;
     top: 10%;
     left: 14%;
@@ -172,7 +171,7 @@
     box-shadow: -4vmin 0 1.1767951058038684vmin currentColor;
 }
 
-.background span:nth-child(13) {
+.dots span:nth-child(13) {
     color: #F24452;
     top: 68%;
     left: 13%;
@@ -182,7 +181,7 @@
     box-shadow: -4vmin 0 1.3840277716124216vmin currentColor;
 }
 
-.background span:nth-child(14) {
+.dots span:nth-child(14) {
     color: #241C59;
     top: 61%;
     left: 92%;
@@ -192,7 +191,7 @@
     box-shadow: 4vmin 0 0.5860966300588331vmin currentColor;
 }
 
-.background span:nth-child(15) {
+.dots span:nth-child(15) {
     color: #3DD980;
     top: 75%;
     left: 43%;
@@ -202,7 +201,7 @@
     box-shadow: 4vmin 0 0.6368611641952218vmin currentColor;
 }
 
-.background span:nth-child(16) {
+.dots span:nth-child(16) {
     color: #16B4F2;
     top: 68%;
     left: 37%;
@@ -212,7 +211,7 @@
     box-shadow: -4vmin 0 0.9661842613434084vmin currentColor;
 }
 
-.background span:nth-child(17) {
+.dots span:nth-child(17) {
     color: #16B4F2;
     top: 74%;
     left: 10%;
@@ -222,7 +221,7 @@
     box-shadow: 4vmin 0 0.8428710521899916vmin currentColor;
 }
 
-.background span:nth-child(18) {
+.dots span:nth-child(18) {
     color: #F2921d;
     top: 18%;
     left: 75%;
@@ -232,7 +231,7 @@
     box-shadow: 4vmin 0 0.6654871948825838vmin currentColor;
 }
 
-.background span:nth-child(19) {
+.dots span:nth-child(19) {
     color: #3DD980;
     top: 69%;
     left: 69%;
@@ -242,7 +241,7 @@
     box-shadow: -4vmin 0 1.0215858476305857vmin currentColor;
 }
 
-.background span:nth-child(20) {
+.dots span:nth-child(20) {
     color: #F24452;
     top: 100%;
     left: 52%;
@@ -252,7 +251,7 @@
     box-shadow: 4vmin 0 0.6586017664831525vmin currentColor;
 }
 
-.background span:nth-child(21) {
+.dots span:nth-child(21) {
     color: #3DD980;
     top: 19%;
     left: 89%;
@@ -262,7 +261,7 @@
     box-shadow: 4vmin 0 1.4344299632516928vmin currentColor;
 }
 
-.background span:nth-child(22) {
+.dots span:nth-child(22) {
     color: #241C59;
     top: 2%;
     left: 38%;
@@ -272,7 +271,7 @@
     box-shadow: 4vmin 0 0.7953512200097119vmin currentColor;
 }
 
-.background span:nth-child(23) {
+.dots span:nth-child(23) {
     color: #241C59;
     top: 8%;
     left: 92%;
@@ -282,7 +281,7 @@
     box-shadow: 4vmin 0 0.7967183967114828vmin currentColor;
 }
 
-.background span:nth-child(24) {
+.dots span:nth-child(24) {
     color: #F2921D;
     top: 96%;
     left: 78%;
@@ -292,7 +291,7 @@
     box-shadow: 4vmin 0 0.7103243452639036vmin currentColor;
 }
 
-.background span:nth-child(25) {
+.dots span:nth-child(25) {
     color: #16B4F2;
     top: 78%;
     left: 71%;
@@ -302,7 +301,7 @@
     box-shadow: -4vmin 0 1.255765429374967vmin currentColor;
 }
 
-.background span:nth-child(26) {
+.dots span:nth-child(26) {
     color: #16B4F2;
     top: 88%;
     left: 21%;
@@ -312,7 +311,7 @@
     box-shadow: -4vmin 0 0.9923914593083529vmin currentColor;
 }
 
-.background span:nth-child(27) {
+.dots span:nth-child(27) {
     color: #F2921D;
     top: 43%;
     left: 84%;
@@ -322,7 +321,7 @@
     box-shadow: 4vmin 0 0.9809815489117577vmin currentColor;
 }
 
-.background span:nth-child(28) {
+.dots span:nth-child(28) {
     color: #F2921D;
     top: 45%;
     left: 47%;
@@ -332,7 +331,7 @@
     box-shadow: -4vmin 0 0.7704351026834215vmin currentColor;
 }
 
-.background span:nth-child(29) {
+.dots span:nth-child(29) {
     color: #F24452;
     top: 62%;
     left: 20%;
