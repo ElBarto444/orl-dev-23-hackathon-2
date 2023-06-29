@@ -28,8 +28,6 @@
 
 						<td class="text-dark">{{ user.roles ? user.roles|json_encode : '' }}</td>
 
-						<td class="text-dark">{{ user.password }}</td>
-
 						<td></td>
 						<td>
 							<a class="btn btn-sm btn-primary text-light" href="{{ path('user_edit', {'id': user.id}) }}">
@@ -45,6 +43,7 @@
 
 								Supprimer</td>
 						</td>
+						<td></td>
 					</tr>
 
 
