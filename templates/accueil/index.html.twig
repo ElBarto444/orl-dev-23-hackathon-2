@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block body %}
+	{% include '_components/_dots.html.twig' %}
 	<section class="container">
 
 		<div class="row-md col d-flex my-5">
@@ -16,27 +17,26 @@
 			<div class="col-md-5 col my-5 d-flex justify-content-end">
 				<img src="{{ asset('build/images/telephone.webp')}}" class="rounded w-75 border border-primary">
 			</div>
-             </div>
+		</div>
 
 
-            	<div class="row-md col d-md-flex d-block my-5">
+		<div class="row-md col d-md-flex d-block my-5">
 			<div class="col-md-5 col my-5 d-flex justify-content-start">
 				<img src="{{ asset('build/images/lieu.jpeg')}}" class="rounded w-75 border border-primary">
 			</div>
 			<div class="col-md-7 col text-end">
 				<h1 class="fw-bold mt-5 text-dark">Venez nous
-					<span class="text-primary text-end">rejoindre !</span></br>
-					Découvrez tous nos lieux d'actions ou nous récupérons votre matériel !
-                    </h1>
-				<a href="https://emmaus-connect.org/nous-trouver/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Ou nous trouver ?</a>
-			</div>
+					<span class="text-primary text-end">rejoindre !</span>
+				</br>
+				Découvrez tous nos lieux d'actions ou nous récupérons votre matériel !
+			</h1>
+			<a href="https://emmaus-connect.org/nous-trouver/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Ou nous trouver ?</a>
 		</div>
+	</div>
 
-		<div class="d-flex">
-							<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
-		</div>
+	<div class="d-flex">
+		<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
+	</div>
 
 
-
-	</section>
-{% endblock %}
+</section>{% endblock %}
