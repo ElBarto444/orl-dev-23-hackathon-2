@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emmaus || FAQ
+{% endblock %}
+
+{% block body %}
+{% include '_components/_dots.html.twig' %}
+<section class="container">
+	<h1 class="fw-bold mt-5 text-dark d-flex justify-content-center">Les questions les plus posées ?</h1>
+
+	<div class="d-flex justify-content-center mb-5">
+		<div class="row">
+			<div class="col-12 my-md-5">
+				{% for faq in faqs %}
+					<details class="my-5 text-dark fw-bold text-center">
+						<summary class="my-4 text-primary fw-bold fs-4">
+							{{ faq.questions }}
+						</summary>
+						{{ faq.reponse }}
+					</details>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+    </section>
+{% endblock %}
