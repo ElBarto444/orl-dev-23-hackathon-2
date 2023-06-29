@@ -1,16 +1,16 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Edit User
+{% block title %}Modifier
 {% endblock %}
 
 {% block body %}
 	{% include '_components/_dots.html.twig' %}
 	<div class="container">
-		<h1 class="fw-bold my-5 text-dark">Modifier un utilisateur</h1>
+		<h1 class="fw-bold mt-5 text-dark">Modifier un utilisateur</h1>
 
 		{{ include('user/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-		<a class="btn btn-sm btn-success my-5 p-2 text-dark" href="{{ path('user_index') }}">Retour</a>
+		<a class="btn btn-sm btn-success mb-5 p-2 text-dark" href="{{ path('user_index') }}">Retour</a>
 
 
 	</div>

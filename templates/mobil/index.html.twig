@@ -20,7 +20,7 @@
 
 
 					<th class="text-dark fw-bold">Marque</th>
-					<th class="text-dark fw-bold">Modele</th>
+					<th class="text-dark fw-bold">Modèle</th>
 					<th class="text-dark fw-bold">Modification</th>
 					<th class="text-dark fw-bold">Détail</th>
 
@@ -45,12 +45,16 @@
 								Modifier</a>
 						</td>
 						<td>
-							<a class="btn btn-outline border-primary text-primary" href="{{ path('app_mobil_show', {'id': mobil.id}) }}">Voir les infos</a>
+							<a class="btn btn-sm btn-danger text-light" href="{{ path('app_mobil_delete', {'id': mobil.id}) }}">
+							<img src="{{ asset('build/images/cross.svg') }}" width="20px">
+							Supprimer</a>
 						</td>
 					</tr>
 				{% else %}
 					<tr>
+
 						<td colspan="6">Aucun appareil trouvé</td>
+
 					</tr>
 				{% endfor %}
 			</tbody>
