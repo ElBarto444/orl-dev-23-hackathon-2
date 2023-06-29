@@ -38,7 +38,7 @@ class Characteristic
     #[ORM\OneToMany(mappedBy: 'characteristic', targetEntity: Mobil::class)]
     private Collection $mobils;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $phoneCondition = null;
 
     #[ORM\Column(length: 255, nullable: true)]
