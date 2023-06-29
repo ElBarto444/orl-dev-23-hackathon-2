@@ -69,14 +69,14 @@ h2{
     top: -8px;
     padding: 6px 22px;
     font-size: 20px;
-    background-color: $dark;
-    color: $primary;
+    background-color: $secondary;
+    color: white;
     font-weight: bold;
     border: none;
     border-radius: 50px;
     height: 50px;
     width: 150px;
-    border: 2px solid black;
+    border: 1px solid $dark;
 }
 
 
