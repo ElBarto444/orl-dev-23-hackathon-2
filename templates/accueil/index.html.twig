@@ -32,19 +32,12 @@
 			</h1>
 			<a href="https://emmaus-connect.org/nous-trouver/" target="_blank" class="btn btn-primary btn-lg text-white fw-bold mt-5">Ou nous trouver ?</a>
 		</div>
-	</div>
 
-<<<<<<< HEAD
-{% if app.user %}
-		<div class="d-flex">
-							<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
-		</div>
-{% endif %}
-=======
-	<div class="d-flex">
-		<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
-	</div>
+		{% if app.user %}
+			<div class="d-flex">
+				<a href="{{ path('app_roue')}}" class="btn btn-primary btn-lg text-white fw-bold m-auto mb-3">Découvrez la roue spécial bénévole !</a>
+			</div>
+		{% endif %}
 
->>>>>>> a7817a3639f41c985d07ad95e1f593ac077ac87d
-
-</section>{% endblock %}
+	</section>
+{% endblock %}

@@ -10,34 +10,35 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link fw-bold mx-5" aria-current="page" href="/home">Accueil</a>
+						<a class="nav-link fw-bold text-dark mx-5" aria-current="page" href="/home">Accueil</a>
 					</li>
 					{% if app.user %}
-					<li>
-						<a class="nav-link fw-bold mx-5" aria-current="page" href="#">Ajouter un smartphone</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link fw-bold mx-5" href="#">Base de donnée</a>
-					</li>
+						<li>
+							<a class="nav-link fw-bold text-dark mx-5" aria-current="page" href="#">Ajouter un smartphone</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold text-dark mx-5" href="#">Base de donnée</a>
+						</li>
 					{% endif %}
 					<li class="nav-item">
-						<a href="#" class="nav-link fw-bold mx-5">FAQ</a>
+						<a href="#" class="nav-link fw-bold text-dark mx-5">FAQ</a>
 					</li>
-					
+
 				</ul>
-	
+
 			</div>
 		</div>
-						{% if app.user is not empty %}
-					<a href="{{ path('app_logout') }}" class="btn btn-danger d-flex fw-bold align-items-center">
-						<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
-						Déconnexion</a>
-				{% else %}
+		{% if app.user is not empty %}
+			<a href="{{ path('app_logout') }}" class="btn btn-danger d-flex fw-bold align-items-center">
+				<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
+				Déconnexion</a>
+		{% else %}
 
-					<a href="{{ path('app_login') }}" class="btn btn-primary d-flex fw-bold align-items-center">
-						<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
-						Connexion</a>
+			<a href="{{ path('app_login') }}" class="btn btn-primary d-flex fw-bold align-items-center">
+				<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
+				Connexion</a>
 
-				{% endif %}
+		{% endif %}
 
-</div></nav>
+	</div>
+</nav>
