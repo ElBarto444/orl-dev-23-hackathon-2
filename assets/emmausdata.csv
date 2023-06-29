@@ -1,0 +1,42 @@
+Calculatrice ( mode d'emploi),,,,Catégorisation des smartphones,,,,,
+Info,Marque,APPLE,, Val Total Min, Val Total Max,Catégorie,,,
+Saisie +Click,Modèle,iphone6,,  -   ,  -   ,1 - HC,,,
+Info,Part Number,,,  90 ,  165 ,2 - C,,,
+Saisie,RAM,6,,  165 ,  255 ,3 - B,,,
+Saisie,Stockage,32,,  255 ,  375 ,4 - A,,,
+Saisie,Indice Antutu,120000,,  375 ,  -   ,5- Premium,,,
+Calcul auto,Val A,49,,,,,,,
+Calcul auto,Val M,0,,ConfigMini pour être mis en vente,,,Etat,,Pondération 
+Calcul auto,Val S,45,,Android ,8,,DEEE,,-100%
+Calcul auto,Total,94,,Ram,2GO,,REPARABLE,,-50%
+Saisie,Pondération ,-10.00%,,Mémoire,16GO,,BLOQUE,,-10%
+Calcul auto,Total Pondéré,84.6,,écran,4P,,RECONDITIONABLE,,-5%
+Calcul auto,Catégorie,1 - HC,,Réseau,4G,,RECONDITIONNE,,0%
+Calcul auto,Prix EC,,,avec chargeur et cable,,,,,5%
+,,,,,,,,,10%
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+"Valeurs Indice, Mémoire, Stockage",,,,,,,,,"Exemple : Iphone 6, https://www.kimovil.com/fr/ou-acheter-apple-iphone-6"
+Ant Min,Ant Max,Val A,Mem,Val M,Stockage ,Val S ,,, 1 G RAM  30
+0,50000,40,1,30,16,31,,, 16 G de stockage  31
+50000,100000,44,2,40,32,45,,, Indice Antutu 102 508  49
+100000,150000,49,3,54,64,66,,, La somme des 3 fait 110
+150000,200000,0,4,0,128,0,,, Et dans le tableau ci-dessous 110 ça le met en catégorie 2-C
+200000,250000,0,6,0,256,0,,,
+250000,300000,0,8,0,512,0,,,
+300000,350000,0,12,0,1000,0,,,
+350000,400000,0,16,0,,,,,
+400000,450000,0,,,,,,,
+450000,500000,0,,,,,,,
+500000,550000,0,,,,,,,
+550000,600000,0,,,,,,,
+600000,650000,0,,,,,,,
+650000,700000,0,,,,,,,
+700000,750000,0,,,,,,,
+750000,800000,0,,,,,,,
+800000,850000,0,,,,,,,
+850000,900000,0,,,,,,,
+900000,950000,0,,,,,,,
+950000,,0,,,,,,,

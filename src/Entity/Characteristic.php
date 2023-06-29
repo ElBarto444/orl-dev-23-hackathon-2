@@ -10,6 +10,14 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CharacteristicRepository::class)]
 class Characteristic
 {
+    public const PHONE_CONDITION = [
+        'DEEE',
+        'REPARABLE',
+        'BLOQUE',
+        'RECONDITIONABLE',
+        'RECONDITIONNE'
+    ];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -29,6 +37,12 @@ class Characteristic
 
     #[ORM\OneToMany(mappedBy: 'characteristic', targetEntity: Mobil::class)]
     private Collection $mobils;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $phoneCondition = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $category = null;
 
     public function __construct()
     {
@@ -114,6 +128,30 @@ class Characteristic
                 $mobil->setCharacteristic(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPhoneCondition(): ?string
+    {
+        return $this->phoneCondition;
+    }
+
+    public function setPhoneCondition(string $phoneCondition): static
+    {
+        $this->phoneCondition = $phoneCondition;
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?string $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }
