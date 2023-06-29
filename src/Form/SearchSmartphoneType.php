@@ -29,7 +29,7 @@ class SearchSmartphoneType extends AbstractType
             ->add('modele', EntityType::class, [
                 'class' => Mobil::class,
                 'choice_label' => 'modele',
-                'placeholder' => 'Modéle',
+                'placeholder' => 'Modèle',
             ])
             ->add('reseau', EntityType::class, [
                 'class' => Mobil::class,
