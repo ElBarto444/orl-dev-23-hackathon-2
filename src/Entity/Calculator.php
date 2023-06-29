@@ -6,7 +6,7 @@ use App\Repository\CalculatorRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CalculatorRepository::class)]
-class Calculator extends Characteristic
+class Calculator extends Mobil
 {
     public const MEMORY_VAL = [
         '1Go' => 30, 
