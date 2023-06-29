@@ -39,9 +39,6 @@ class Mobil
     private ?string $modele = null;
 
     #[ORM\ManyToOne(inversedBy: 'mobils')]
-    private ?Characteristic $characteristic = null;
-
-    #[ORM\ManyToOne(inversedBy: 'mobils')]
     private ?Category $category = null;
 
     #[ORM\Column(length: 255)]
@@ -70,16 +67,10 @@ class Mobil
     #[ORM\Column(length: 255)]
     private ?string $RAM = null;
 
-    #[ORM\OneToMany(mappedBy: 'characteristic', targetEntity: Mobil::class)]
-    private Collection $mobils;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $phoneCondition = null;
 
-       public function __construct()
-    {
-        $this->mobils = new ArrayCollection();
-    }
     public function getId(): ?int
     {
         return $this->id;
@@ -200,10 +191,7 @@ class Mobil
     /**
      * @return Collection<int, Mobil>
      */
-    public function getMobils(): Collection
-    {
-        return $this->mobils;
-    }
+   
 
     public function getPhoneCondition(): ?string
     {

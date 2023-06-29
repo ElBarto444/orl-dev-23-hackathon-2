@@ -2,15 +2,14 @@
 
 body {
     background-color: $light;
+    font-family: 'Poppins';
 }
 
 h1{
-    color: $primary;
+    color: $dark;
     font-size: 100px;
-    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    font-family: 'Poppins';
     text-transform: uppercase;
-    font-family: var(--font-title);
     margin-bottom: 50px;
 }
 
@@ -20,7 +19,6 @@ h2{
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
     1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
     text-transform: uppercase;
-    font-family: var(--font-title);
     margin-top: 0;
     
 }
@@ -111,7 +109,6 @@ h2{
 
 .scoreTest {
     font-size: 3rem;
-    font-family: var(--font-title);
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
     1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
@@ -133,7 +130,6 @@ h2{
 
 .formTitle {
     font-size: 2.7rem;
-    font-family: var(--font-title);
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
     1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }

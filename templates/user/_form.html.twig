@@ -1,7 +1,5 @@
-<div class="container">
+<div class="container form">
 	{{ form_start(form) }}
-	<div class="user-form">
-		{{ form_widget(form) }}
-	</div>
+	{{ form_widget(form) }}
 	<button class="btn my-5 btn btn-success rounded my-5">{{ button_label|default('Ajouter') }}</button>
 	{{ form_end(form) }}
