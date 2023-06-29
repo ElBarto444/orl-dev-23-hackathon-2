@@ -9,173 +9,151 @@
 {% endblock %}
 
 {% block body %}
+	{% include '_components/_dots.html.twig' %}
+
+
 	<section class="container">
 
-<body onload="wellcom()">
-    <div id="game" class="container">
-        <h1 class="fw-bold mt-5"class="text-primary">La roue
-   des bénévoles !</h1>
-        
-        <input type="button" onclick="suspense()" id="jouer" value="Jouer">
-        <div id="fleche"></div>
-        <img id="roue" src="{{ asset('build/images/wheel.png')}}" alt="roue">
-    </div>
+		<body onload="wellcom()">
+			<div id="game" class="container">
+				<h1 class="fw-bold mt-5">La roue des bénévoles !</h1>
 
-    <!-- PORTEFEUILLE -->
-    <div id="portefeuille">
-        <h3 class="monnaie">Bonne chance ...</h3>
-    </div>
+				<input type="button" onclick="suspense()" id="jouer" value="Jouer">
+				<div id="fleche"></div>
+				<img id="roue" src="{{ asset('build/images/wheel.png')}}" alt="roue">
+			</div>
 
+			<!-- PORTEFEUILLE -->
+			<div id="portefeuille">
+				<h3 class="monnaie">Bonne chance ...</h3>
+			</div>
 
 
-    <script>
-	let roue = document.querySelector("#roue");
+			<script>
+				let roue = document.querySelector("#roue");
 let btnJouer = document.querySelector("#jouer");
 let monPortefeuille = document.querySelector('.monnaie');
 let mise = document.querySelector('#mise');
 let portefeuille = 10000;
 const boutonJouer = document.getElementById('jouer');
 boutonJouer.addEventListener('click', function none() {
-    boutonJouer.style.display = 'none';
+boutonJouer.style.display = 'none';
 })
-
 
 
 // Fonction d'initialisation
 btnJouer.addEventListener("click", initialisation);
 function initialisation() {
-    roueTourne();
-    playerAudio();
+roueTourne();
+playerAudio();
 }
-
 
 
 // Fonction qui calcule l'argent du portefeuille
 function calculArgent(argent) {
-  portefeuille += argent;
-  monPortefeuille.innerHTML = "Ma chance... : <br> - " + portefeuille + " %"
+portefeuille += argent;
+monPortefeuille.innerHTML = "Ma chance... : <br> - " + portefeuille + " %"
 }
 
-// Fonction qui lire l'audio  
+// Fonction qui lire l'audio
 function playerAudio() {
-  let audio = new Audio('spin.mp3');
-  audio.play();
+let audio = new Audio('spin.mp3');
+audio.play();
 }
 
 // Fonction qui faire tourner la roue
 function roueTourne() {
-  let deg = Math.floor(Math.random() * 5000); // degré temporaire de rotation comprise entre 0 et 5000
-  argentAleatoire(deg);
-  roue.style.transition = "all 5s ease-out"; // sans sa je ne tourne pas
-  roue.style.transform = "rotate(" + deg + "deg)";
-  // console.log(deg)
+let deg = Math.floor(Math.random() * 5000); // degré temporaire de rotation comprise entre 0 et 5000
+argentAleatoire(deg);
+roue.style.transition = "all 5s ease-out"; // sans sa je ne tourne pas
+roue.style.transform = "rotate(" + deg + "deg)";
+// console.log(deg)
 }
 
 // Fonction qui choisi une somme aléatoire lorsque l'on mise
 function argentAleatoire(deg) {
-  let valeur = deg / 360; // degré temporaire / 360
-  valeur = (valeur - parseInt(valeur.toString().split(".")[0])) * 360; // calule et trouve la valeur du degré normal en 360, grace au degré temporaire
-  setTimeout(() => {
-    switch (true) {
-      case valeur > 0 && valeur <= 15:
-        calculArgent(700);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 15 && valeur <= 30:
-        calculArgent(600);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 30 && valeur <= 45:
-        calculArgent(3000);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 45 && valeur <= 60:
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 60 && valeur <= 75:
-        calculArgent(500);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 75 && valeur <= 90:
-        calculArgent(750);
-        alert("Vous avez gagné 10% sur votre prochaine commande !");
-        break;
-      case valeur > 90 && valeur <= 105:
-        calculArgent(600);
-        alert("Vous avez gagné la formation de votre choix !");
-        break;
-      case valeur > 105 && valeur <= 120:
-        calculArgent(450);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 120 && valeur <= 135:
-        calculArgent(300);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 135 && valeur <= 150:
-        setTimeout(roueTourne, 1000);
-        break;
-      case valeur > 150 && valeur <= 165:
-        calculArgent(800);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 165 && valeur <= 180:
-        calculArgent(700);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 180 && valeur <= 195:
-        calculArgent(600);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 195 && valeur <= 210:
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 210 && valeur <= 225:
-        calculArgent(900);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 225 && valeur <= 240:
-        calculArgent(400);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 240 && valeur <= 255:
-        calculArgent(500);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 255 && valeur <= 270:
-        calculArgent(1000);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 270 && valeur <= 285:
-        calculArgent(650);
-        alert("Dommage, c'est perdu...")
-        break;
-      case valeur > 285 && valeur <= 300:
-        calculArgent(400);
-        alert("Dommage, c'est perdu...")
-        break;
-      case valeur > 300 && valeur <= 315:
-        calculArgent(300);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 315 && valeur <= 330:
-        calculArgent(800);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 330 && valeur <= 345:
-        calculArgent(500);
-        alert("Dommage, c'est perdu...");
-        break;
-      case valeur > 345 && valeur <= 360:
-        calculArgent(350);
-        alert("Dommage, c'est perdu...");
-        break;
-    }
-  }, 5000);
+let valeur = deg / 360; // degré temporaire / 360
+valeur = (valeur - parseInt(valeur.toString().split(".")[0])) * 360; // calule et trouve la valeur du degré normal en 360, grace au degré temporaire
+setTimeout(() => {
+switch (true) {
+case valeur > 0 && valeur <= 15: calculArgent(700);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 15 && valeur <= 30: calculArgent(600);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 30 && valeur <= 45: calculArgent(3000);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 45 && valeur <= 60:
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 60 && valeur <= 75: calculArgent(500);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 75 && valeur <= 90: calculArgent(750);
+alert("Vous avez gagné 10% sur votre prochaine commande !");
+break;
+case valeur > 90 && valeur <= 105: calculArgent(600);
+alert("Vous avez gagné la formation de votre choix !");
+break;
+case valeur > 105 && valeur <= 120: calculArgent(450);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 120 && valeur <= 135: calculArgent(300);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 135 && valeur <= 150:
+setTimeout(roueTourne, 1000);
+break;
+case valeur > 150 && valeur <= 165: calculArgent(800);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 165 && valeur <= 180: calculArgent(700);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 180 && valeur <= 195: calculArgent(600);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 195 && valeur <= 210:
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 210 && valeur <= 225: calculArgent(900);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 225 && valeur <= 240: calculArgent(400);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 240 && valeur <= 255: calculArgent(500);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 255 && valeur <= 270: calculArgent(1000);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 270 && valeur <= 285: calculArgent(650);
+alert("Dommage, c'est perdu...")
+break;
+case valeur > 285 && valeur <= 300: calculArgent(400);
+alert("Dommage, c'est perdu...")
+break;
+case valeur > 300 && valeur <= 315: calculArgent(300);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 315 && valeur <= 330: calculArgent(800);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 330 && valeur <= 345: calculArgent(500);
+alert("Dommage, c'est perdu...");
+break;
+case valeur > 345 && valeur <= 360: calculArgent(350);
+alert("Dommage, c'est perdu...");
+break;
 }
-</script>
+}, 5000);
+}
+			</script>
 
-    <a href="{{ path('app_accueil')}}" class="btn btn-primary btn-lg text-white fw-bold btn-lg rounded">Revenir à l'accueil</a>
-
-    </section>
+			<a href="{{ path('app_accueil')}}" class="btn btn-primary btn-lg text-white fw-bold btn-lg rounded">Revenir à l'accueil</a>
+		</body>
+	</section>
 {% endblock %}

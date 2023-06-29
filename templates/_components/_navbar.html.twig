@@ -10,7 +10,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link fw-bold mx-5" aria-current="page" href="/home">Accueil</a>
+						<a class="nav-link fw-bold text-dark mx-5" aria-current="page" href="/home">Accueil</a>
 					</li>
 					{% if app.user %}
 					<li>
@@ -21,11 +21,11 @@
 					</li>
 					{% endif %}
 					<li class="nav-item">
-						<a href="#" class="nav-link fw-bold mx-5">FAQ</a>
+						<a href="#" class="nav-link fw-bold text-dark mx-5">FAQ</a>
 					</li>
-					
+
 				</ul>
-	
+
 			</div>
 		</div>
 						{% if app.user is not empty %}
@@ -38,6 +38,7 @@
 						<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
 						Connexion</a>
 
-				{% endif %}
+		{% endif %}
 
-</div></nav>
+	</div>
+</nav>
