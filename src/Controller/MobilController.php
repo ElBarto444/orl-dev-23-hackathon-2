@@ -94,6 +94,7 @@ class MobilController extends AbstractController
 
             return $this->redirectToRoute('app_mobil_index', [], Response::HTTP_SEE_OTHER);
         }
+        
         return $this->render('mobil/new.html.twig', [
             'mobil' => $mobil,
             'form' => $form,
