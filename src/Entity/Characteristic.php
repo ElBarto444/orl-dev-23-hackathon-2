@@ -27,7 +27,7 @@ class Characteristic
     private ?string $reseau = null;
 
     #[ORM\Column]
-    private ?int $stockage = null;
+    private ?string $stockage = null;
 
     #[ORM\Column(length: 255)]
     private ?string $ecran = null;
@@ -66,12 +66,12 @@ class Characteristic
         return $this;
     }
 
-    public function getStockage(): ?int
+    public function getStockage(): ?string
     {
         return $this->stockage;
     }
 
-    public function setStockage(int $stockage): static
+    public function setStockage(string $stockage): static
     {
         $this->stockage = $stockage;
 
