@@ -1,7 +1,6 @@
-
 <nav class="navbar navbar-expand-lg bg-body-light m-0 p-0">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="/">
 			<img src="{{ asset('build/images/logo_navbar.png') }}" width="150px">
 		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,9 +20,16 @@
 				</li>
 			</ul>
 		</div>
-		</div>
-		<button class="btn btn-danger d-flex align-items-center fw-bold text-white" type="submit">
-				<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
-				Déconnexion</button>
 	</div>
-</nav>
+	{% if app.user is not empty %}
+		<a href="{{ path('app_logout') }}" class="btn btn-danger d-flex align-items-center">
+			<img src="{{ asset('build/images/svg/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
+			Déconnexion</a>
+	{% else %}
+
+		<a href="{{ path('app_login') }}" class="btn btn-primary d-flex fw-bold align-items-center">
+			<img src="{{ asset('build/images/turn-off-svgrepo-com.svg') }}" width="20px" class="onoff me-2">
+			Connexion</a>
+
+	{% endif %}
+</div></nav>
