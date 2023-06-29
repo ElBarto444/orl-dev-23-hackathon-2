@@ -13,37 +13,31 @@
 
 	{% include '_components/_searchBar.html.twig'%}
 	<div class="container">
-		<div class="card bg-light">
-			<div class="row">
-				{% for mobil in mobils %}
-					<div class="col-lg-4 col-md-6">
-						<div class=" rounded m-2">
-							<img class="card-img-top" src="{{ vich_uploader_asset(mobil) }}" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title ">{{ mobil.marque }}-{{ mobil.modele }}</h5>
-								<p class="card-text">Taille écran
-									{{ mobil.ecran }} </p>
-								<p></p>
-								<p>Mémoire
-									{{ mobil.stockage }}</p>
-								<p>Réseau
-									{{ mobil.reseau }} RAM
-									{{ mobil.RAM }}</p>
-								<a href="{{ path('app_mobil_show', {'id': mobil.id}) }}" class="btn btn-success">Détail</a>
-							</div>
+		<div class="row">
+			{% for mobil in mobils %}
+				<div class="col-lg-4 col-md-6">
+					<div class=" rounded m-2">
+						<img class="card-img-top" src="{{ vich_uploader_asset(mobil) }}" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title ">{{ mobil.marque }}-{{ mobil.modele }}</h5>
+							<p class="card-text">Taille écran
+								{{ mobil.ecran }}
+							</p>
+							<p></p>
+							<p>Mémoire
+								{{ mobil.stockage }}</p>
+							<p>Réseau
+								{{ mobil.reseau }}
+								RAM
+								{{ mobil.RAM }}</p>
+							<a href="{{ path('app_mobil_show', {'id': mobil.id}) }}" class="btn btn-success">Détail</a>
 						</div>
 					</div>
-
-	
-				{% endfor %}
-			</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
-
-	<div class="container">
-
-		<a class="btn btn-sm btn-success my-5 p-2 text-dark" href="{{ path('app_mobil_new') }}">Ajouter un nouveau smartphone</a>
-
-	</div>
-{% endblock %}
+<div class="container">
+	<a class="btn btn-sm btn-success my-5 p-2 text-dark" href="{{ path('app_mobil_new') }}">Ajouter un nouveau smartphone</a>
+</div>{% endblock %}

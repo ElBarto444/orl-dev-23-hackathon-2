@@ -1,5 +1,16 @@
-.form {
+#mobil {
+    .form-label {
+        color: $dark;
+        font-weight: bold;
+    }
 
-    color: $dark;
-    font-weight: bold;
+    .col-form-label {
+        color: $dark;
+        font-weight: bold;
+    }
+
+    .form-control {
+        color: $dark;
+    }
+
 }
