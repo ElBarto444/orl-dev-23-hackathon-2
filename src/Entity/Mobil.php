@@ -38,10 +38,13 @@ class Mobil
     #[ORM\Column(length: 255)]
     private ?string $modele = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $categoryName = null;
+
     #[ORM\ManyToOne(inversedBy: 'mobils')]
     private ?Category $category = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $poster = null;
 
     #[Vich\UploadableField(mapping: 'poster_file', fileNameProperty: 'poster')]
@@ -59,7 +62,7 @@ class Mobil
     private ?string $reseau = null;
 
     #[ORM\Column]
-    private ?int $stockage = null;
+    private ?string $stockage = null;
 
     #[ORM\Column(length: 255)]
     private ?string $ecran = null;
@@ -117,7 +120,7 @@ class Mobil
         return $this->poster;
     }
 
-    public function setPoster(string $poster): static
+    public function setPoster(?string $poster): static
     {
         $this->poster = $poster;
 
@@ -152,12 +155,12 @@ class Mobil
         return $this;
     }
 
-    public function getStockage(): ?int
+    public function getStockage(): ?string
     {
         return $this->stockage;
     }
 
-    public function setStockage(int $stockage): static
+    public function setStockage(string $stockage): static
     {
         $this->stockage = $stockage;
 
@@ -201,6 +204,31 @@ class Mobil
     public function setPhoneCondition(string $phoneCondition): static
     {
         $this->phoneCondition = $phoneCondition;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of categoryName
+     *
+     * @return ?string
+     */
+    public function getCategoryName(): ?string
+    {
+        return $this->categoryName;
+    }
+
+
+    /**
+     * Set the value of categoryName
+     *
+     * @param ?string $categoryName
+     *
+     * @return self
+     */
+    public function setCategoryName(?string $categoryName): self
+    {
+        $this->categoryName = $categoryName;
 
         return $this;
     }

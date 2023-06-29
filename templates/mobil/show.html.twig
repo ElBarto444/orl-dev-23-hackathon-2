@@ -20,14 +20,17 @@
 					<th>Poster</th>
 					<td>{{ mobil.poster }}</td>
 				</tr>
-
+				<tr>
+					<th>Catégorie</th>
+					<td>{{ mobil.categoryName }}</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
-    <div class="container">
-	<a class="btn btn-primary mt-3" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
-	{{ include('mobil/_delete_form.html.twig') }}
+	<div class="container">
+		<a class="btn btn-primary mt-3" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
+		{{ include('mobil/_delete_form.html.twig') }}
 
-	<a class="btn btn-outline border-primary text-primary mt-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
-</div>
+		<a class="btn btn-outline border-primary text-primary mt-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
+	</div>
 {% endblock %}
