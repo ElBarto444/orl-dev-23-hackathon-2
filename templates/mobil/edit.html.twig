@@ -2,6 +2,7 @@
 {% block title %}Edit Mobil{% endblock %}
 
 {% block body %}
+{% include '_components/_dots.html.twig' %}
     <h1 class="text-center">Modifier le mobile</h1>
 <div class="container">
     {{ include('mobil/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
