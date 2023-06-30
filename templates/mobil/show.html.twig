@@ -4,47 +4,59 @@
 {% endblock %}
 
 {% block body %}
-{% include '_components/_dots.html.twig' %}
-<div class="container">
-	<h1 class="my-5 fw-bold text-primary">Detail du mobile</h1>
+	{% include '_components/_dots.html.twig' %}
+	<h1 class="text-center fw-bold text-primary my-5">Detail du mobile</h1>
+	<div class="container">
 		<table class="table">
-			<tbody class="my-5">
-				<tr class="my-5">
-					<th class="my-5">Marque</th>
-					<td class="my-5">{{ mobil.marque }}</td>
+			<tbody>
+				<tr>
+					<th class="fw-bold text-dark">Marque</th>
+					<td class="fw-bold text-dark">{{ mobil.marque }}</td>
 				</tr>
 				<tr>
-					<th>Modèle</th>
-					<td>{{ mobil.modele }}</td>
+					<th class="fw-bold text-dark">Modèle</th>
+					<td class="fw-bold text-dark">{{ mobil.modele }}</td>
 				</tr>
 
-<tr>
-					<th>Taille écran</th>
-					<td>{{ mobil.ecran }}</td>
+				<tr>
+					<th class="fw-bold text-dark">Taille écran</th>
+					<td class="fw-bold text-dark">{{ mobil.ecran }}</td>
+
 
 				</tr>
 				<tr>
-					<th>RAM</th>
-					<td>{{ mobil.RAM }}</td>
+					<th class="fw-boldtext-dark">RAM</th>
+					<td class="fw-bold text-dark">{{ mobil.RAM }}</td>
+
 				</tr>
 				<tr>
-					<th>Stockage</th>
-					<td>{{ mobil.stockage }}</td>
+					<th class="fw-bold text-dark">Stockage</th>
+					<td class="fw-bold text-dark">{{ mobil.stockage }}</td>
+
 				</tr>
 				<tr>
-					<th>Réseau</th>
-					<td>{{ mobil.reseau }}</td>
+					<th class="fw-bold text-dark">Réseau</th>
+					<td class="fw-bold text-dark">{{ mobil.reseau }}</td>
+
+				</tr>
 				<tr>
-					<th>Catégorie</th>
-					<td>{{ mobil.categoryName }}</td>
+					<th class="fw-bold text-dark">Catégorie</th>
+					<td class="fw-bold text-dark">{{ mobil.categoryName }}</td>
+
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<div class="container">
-		<a class="btn btn-primary mt-3" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">Modifier</a>
+		<a class="btn btn-primary text-dark mt-3" href="{{ path('app_mobil_edit', {'id': mobil.id}) }}">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewbox="0 0 16 16">
+				<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+				<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+			</svg>
+			Modifier</a>
+
 		{{ include('mobil/_delete_form.html.twig') }}
 
-		<a class="btn btn-success text-black mt-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
+		<a class="btn btn-outline border-success bg-success text-dark mt-3" href="{{ path('app_mobil_index') }}">Retour à la liste</a>
 	</div>
 {% endblock %}
