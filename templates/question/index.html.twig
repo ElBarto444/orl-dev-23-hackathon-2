@@ -10,15 +10,18 @@
 
 	<div class="d-flex justify-content-center mb-5">
 		<div class="row">
-			<div class="col-12 my-md-5">
+			<div class="col-6 my-md-5">
 				{% for faq in faqs %}
-					<details class="my-5 text-dark fw-bold text-center">
+					<details class="my-5 text-dark fw-bold text-start">
 						<summary class="my-4 text-primary fw-bold fs-4">
 							{{ faq.questions }}
 						</summary>
 						{{ faq.reponse }}
 					</details>
 				{% endfor %}
+			</div>
+			<div class="col-6 my-md-5">
+			<img src="{{ asset('build/images/img-faq.png')}}" class="w-100">
 			</div>
 		</div>
 	</div>
